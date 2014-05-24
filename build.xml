@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="android-junit-report-html" default="jar">
+    <!-- Should define the location of android.jar to build against. -->
+    <property file="local.properties"/>
+
+    <property name="source.dir" value="src"/>
+    <property name="out.dir" value="build"/>
+    <property name="classes.dir" value="${out.dir}/classes"/>
+    <property name="jar" value="${out.dir}/android-junit-report-html-${version}.jar"/>
+
+    <target name="clean">
+        <delete dir="${out.dir}"/>
+    </target>
+    
+    <target name="eclipse">
+        <copy file=".classpath.template" tofile=".classpath"/>
+        <replace file=".classpath" token="@android.jar@" value="${android.jar}"/>
+    </target>
+
+    <target name="-init">
+        <mkdir dir="${out.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+    </target>
+    
+    <target name="compile" depends="-init">
+        <javac target="1.6" source="1.6" debug="true" destdir="${classes.dir}" classpath="${android.jar}" includeantruntime="false">
+            <compilerarg value="-Xlint:deprecation" />
+						<compilerarg value="-Xlint:unchecked" />
+						<src path="${source.dir}"/>
+        </javac>
+    </target>
+
+    <target name="jar" depends="clean,-init, compile">
+        <jar destfile="${jar}" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Implementation-Vendor" value="Masaaki Mitsuyasu"/>
+                <attribute name="Implementation-Title" value="Android JUnit Report Html Test Runner"/>
+                <attribute name="Implementation-Version" value="${version}"/>
+            </manifest>
+        </jar>
+    </target>
+</project>

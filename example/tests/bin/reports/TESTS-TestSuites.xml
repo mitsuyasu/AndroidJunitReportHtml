@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="" id="0" name="MainActivityTest" package="com.masa.sampleproject.test" tests="1" time="0.062" timestamp="2013-05-01T02:02:03">
+    <testcase classname="com.masa.sampleproject.test.MainActivityTest" name="testMain" />
+  </testsuite>
+  <testsuite errors="0" failures="4" hostname="" id="1" name="SampleProjectTest" package="com.masa.sampleproject.test" tests="5" time="0.028" timestamp="2013-05-01T02:02:03">
+    <testcase classname="com.masa.sampleproject.test.SampleProjectTest" name="testTest" />
+    <testcase classname="com.masa.sampleproject.test.SampleProjectTest" name="testTest2Error">
+      <failure message="junit.framework.AssertionFailedError: expected:&lt;1&gt; but was:&lt;2&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;1&gt; but was:&lt;2&gt;
+	at com.masa.sampleproject.test.SampleProjectTest.testTest2Error(SampleProjectTest.java:16)
+</failure>
+    </testcase>
+    <testcase classname="com.masa.sampleproject.test.SampleProjectTest" name="testTest2Error">
+      <failure message="junit.framework.AssertionFailedError: expected:&lt;1&gt; but was:&lt;2&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;1&gt; but was:&lt;2&gt;
+	at com.masa.sampleproject.test.SampleProjectTest.testTest2Error(SampleProjectTest.java:16)
+</failure>
+    </testcase>
+    <testcase classname="com.masa.sampleproject.test.SampleProjectTest" name="testTestError">
+      <failure message="junit.framework.AssertionFailedError: expected:&lt;1&gt; but was:&lt;2&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;1&gt; but was:&lt;2&gt;
+	at com.masa.sampleproject.test.SampleProjectTest.testTestError(SampleProjectTest.java:12)
+</failure>
+    </testcase>
+    <testcase classname="com.masa.sampleproject.test.SampleProjectTest" name="testTestError">
+      <failure message="junit.framework.AssertionFailedError: expected:&lt;1&gt; but was:&lt;2&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;1&gt; but was:&lt;2&gt;
+	at com.masa.sampleproject.test.SampleProjectTest.testTestError(SampleProjectTest.java:12)
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="" id="2" name="TestSample" package="com.masa.sampleproject.test" tests="1" time="0.004" timestamp="2013-05-01T02:02:03">
+    <testcase classname="com.masa.sampleproject.test.TestSample" name="testTest2" />
+  </testsuite>
+</testsuites>
